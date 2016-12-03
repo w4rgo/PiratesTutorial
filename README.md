@@ -1,3 +1,5 @@
+Thie is a completed version of the Pirates Tutorial on version 8.0.
+
 # PiratesTutorial
 ---
 

@@ -1,0 +1,12 @@
+package improbable.ship;
+
+type Hit {
+  EntityId firer_entity_id = 1;
+}
+
+component HitByCannonball {
+  option queryable = false;
+
+  id = 1002;
+  event Hit hit;
+}

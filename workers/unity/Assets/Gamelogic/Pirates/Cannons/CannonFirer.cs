@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using Improbable.Ship;
+using Improbable.Unity.Visualizer;
+using UnityEngine;
 
 namespace Assets.Gamelogic.Pirates.Cannons
 {
     public class CannonFirer : MonoBehaviour
     {
+        [Require] private PlayerControlsReader PlayerControls;
+
         private Cannon cannon;
 
         private void Start()
@@ -11,9 +15,20 @@ namespace Assets.Gamelogic.Pirates.Cannons
             cannon = gameObject.GetComponent<Cannon>();
         }
 
-        private void OnEnable()
+        void OnEnable()
         {
-            // Register your callbacks in OnEnable.
+            PlayerControls.FireLeft += OnFireLeft;
+            PlayerControls.FireRight += OnFireRight;
+        }
+
+        private void OnFireLeft(FireLeft fireLeft)
+        {
+            FireCannons(-transform.right);
+        }
+
+        private void OnFireRight(FireRight fireRight)
+        {
+            FireCannons(transform.right);
         }
 
         private void FireCannons(Vector3 direction)
@@ -24,9 +39,10 @@ namespace Assets.Gamelogic.Pirates.Cannons
             }
         }
 
-        private void OnDisable()
+        void OnDisable()
         {
-            // De-register your callbacks in OnDisable.
+            PlayerControls.FireLeft -= OnFireLeft;
+            PlayerControls.FireRight -= OnFireRight;
         }
     }
 }

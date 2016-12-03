@@ -1,4 +1,3 @@
-import improbable.worldApps._
 import improbable.corelibrary.transforms.TransformState
 import improbable.corelibrary.transforms.global.GlobalTransformState
 import improbable.dapi.LaunchConfig
@@ -8,9 +7,9 @@ import improbable.natures.Terrain
 import improbable.unity.asset.PrefabContext
 import improbable.unity.fabric.AuthoritativeEntityOnly
 import improbable.unity.fabric.engine.EnginePlatform._
-import improbable.unity.fabric.satisfiers.SatisfyVisual
 import improbable.unity.fabric.engine.{DownloadableUnityConstraintToEngineDescriptorResolver, EnginePlatform}
-import improbable.unity.fabric.satisfiers.SatisfyPhysics
+import improbable.unity.fabric.satisfiers.{SatisfyPhysics, SatisfyVisual}
+import improbable.worldApps._
 
 object Settings {
   val appsToStart = Seq(classOf[ClientEntityLifeCycleManager], classOf[WorldInitialiser])

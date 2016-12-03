@@ -1,8 +1,16 @@
 {
+  "worker_flagz": [
+      {
+        "worker_type": "gsim",
+        "flagz": [
+          {
+            "name": "pirates_max_ships",
+            "value": "200"
+          }
+        ]
+      }
+  ],
   "flagz": [{
-    "name": "pirates_max_ships",
-    "value": "200"
-  }, {
     "name": "bridge_enable_ping",
     "value": "true"
   }, {

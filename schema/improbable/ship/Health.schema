@@ -1,0 +1,9 @@
+package improbable.ship;
+
+component Health {
+  option synchronized = true;
+  option queryable = false;
+
+  id = 1001;
+  int32 current = 1;
+}

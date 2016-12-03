@@ -14,6 +14,16 @@ namespace Assets.Gamelogic.Pirates.Behaviours
                 .TargetSpeed(Mathf.Clamp01(Input.GetAxis("Vertical")))
                 .TargetSteering(Input.GetAxis("Horizontal"))
                 .FinishAndSend();
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                PlayerControls.Update.TriggerFireRight().FinishAndSend();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                PlayerControls.Update.TriggerFireLeft().FinishAndSend();
+            }
         }
     }
 }

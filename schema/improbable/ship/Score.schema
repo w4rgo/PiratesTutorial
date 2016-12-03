@@ -1,0 +1,8 @@
+package improbable.ship;
+
+component Score {
+  option queryable = false;
+  id = 1003;
+
+  int32 number_of_kills = 1;
+}
