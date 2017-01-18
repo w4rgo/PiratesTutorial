@@ -16,15 +16,19 @@ namespace Assets.EntityTemplates
             var playerEntityTemplate = new Entity();
             // Define components attached to entity
             playerEntityTemplate.Add(new WorldTransform.Data(new WorldTransformData(initialPosition, 0)));
-            playerEntityTemplate.Add(new PlayerLifecycle.Data(new PlayerLifecycleData(0, 3, 10)));
             playerEntityTemplate.Add(new ShipControls.Data(new ShipControlsData(0, 0)));
+            playerEntityTemplate.Add(new PlayerLifecycle.Data(new PlayerLifecycleData(0, 3, 10)));
+            playerEntityTemplate.Add(new Health.Data(new HealthData(1000)));
+			playerEntityTemplate.Add(new Score.Data(new ScoreData(0)));
 
             // Grant component access permissions
             var acl = Acl.Build()
                 .SetReadAccess(CommonPredicates.PhysicsOrVisual)
                 .SetWriteAccess<WorldTransform>(CommonPredicates.SpecificClientOnly(clientWorkerId))
                 .SetWriteAccess<ShipControls>(CommonPredicates.SpecificClientOnly(clientWorkerId))
-                .SetWriteAccess<PlayerLifecycle>(CommonPredicates.PhysicsOnly);
+                .SetWriteAccess<PlayerLifecycle>(CommonPredicates.PhysicsOnly)
+				.SetWriteAccess<Health>(CommonPredicates.PhysicsOnly)
+				.SetWriteAccess<Score>(CommonPredicates.PhysicsOnly);
             playerEntityTemplate.SetAcl(acl);
 
             return playerEntityTemplate;

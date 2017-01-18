@@ -21,6 +21,15 @@ namespace Assets.Gamelogic.Pirates.Behaviours
             ShipControlsWriter.Send(new ShipControls.Update()
                 .SetTargetSpeed(Mathf.Clamp01(Input.GetAxis("Vertical")))
                 .SetTargetSteering(Input.GetAxis("Horizontal")));
+			if (Input.GetKeyDown(KeyCode.Q))
+			{
+				ShipControlsWriter.Send(new ShipControls.Update().AddFireLeft(new FireLeft()));
+			}
+			if (Input.GetKeyDown(KeyCode.E))
+			{
+				ShipControlsWriter.Send(new ShipControls.Update().AddFireRight(new FireRight()));
+			}
+
         }
     }
 }
