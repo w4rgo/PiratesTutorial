@@ -31,7 +31,7 @@ Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\work
 Loading C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\protobuf-net.dll into Unity Child Domain
 Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll (this message is harmless)
 Loading C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Threading.dll into Unity Child Domain
-- Completed reload, in  0.039 seconds
+- Completed reload, in  0.043 seconds
 Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Xml.dll (this message is harmless)
@@ -40,7 +40,7 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.011880 ms
+UnloadTime: 1.001314 ms
 Command line build/worker/UnityClient@Windows/UnityClient@Windows.exe +assemblyName local_assembly +engineType UnityClient +infraServicesUrl http://127.0.0.1:21000 +appName gamingsuccess -logfile external-default-client.log
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -66,7 +66,7 @@ Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\work
 Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Security.dll (this message is harmless)
 Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Messaging.dll (this message is harmless)
 Platform assembly: C:\Users\icombinator\work\pirates910\workers\unity\build\worker\UnityClient@Windows\UnityClient@Windows_Data\Managed\System.Web.Services.dll (this message is harmless)
-Bootstrap created a player entity with ID: 5
+Bootstrap created a player entity with ID: 52
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -75,5 +75,5 @@ Unable to find shaders used for the terrain engine. Please include Nature/Terrai
 (Filename:  Line: 384)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1748 -> priority: 1 
-  Thread -> id: 15ec -> priority: 1 
+  Thread -> id: a68 -> priority: 1 
+  Thread -> id: ab0 -> priority: 1 
