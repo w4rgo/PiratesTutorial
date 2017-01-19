@@ -13,8 +13,8 @@ namespace Assets.EntityTemplates
 {
 	public class PirateEntityTemplate : MonoBehaviour
 	{
-		private static int spawnDiameter = 300;
-		private static int totalPirates = 50;
+		private static int spawnDiameter = 1000;
+		private static int totalPirates = 250;
 
 		// Template definition for a PlayerSpawner snapshot entity
 		public static SnapshotEntity GeneratePirateSnapshotEntityTemplate()
