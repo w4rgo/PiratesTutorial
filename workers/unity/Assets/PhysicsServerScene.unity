@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400685693}
   - component: {fileID: 400685694}
+  - component: {fileID: 400685696}
   - component: {fileID: 400685697}
   m_Layer: 0
   m_Name: GameEntry
@@ -164,6 +165,17 @@ MonoBehaviour:
       EntityCreationLimitPerFrame: 100
       UsePerInstanceAssetCache: 1
       UsePrefabPooling: 0
+--- !u!114 &400685696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 400685688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee35b39e1d35e8e4b86acf45ed477b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &400685697
 MonoBehaviour:
   m_ObjectHideFlags: 0
