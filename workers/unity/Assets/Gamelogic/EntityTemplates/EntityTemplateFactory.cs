@@ -5,6 +5,7 @@ using Improbable.Player;
 using Improbable.Ship;
 using Improbable.Unity.Core.Acls;
 using Improbable.Worker;
+using UnityEngine;
 using Random = UnityEngine.Random; // Used in lesson 8
 using Terrain = Improbable.Terrain.Terrain;
 
@@ -23,6 +24,7 @@ namespace Assets.Gamelogic.EntityTemplates
             playerEntityTemplate.Add(new ClientConnection.Data(SimulationSettings.TotalHeartbeatsBeforeTimeout));
             playerEntityTemplate.Add(new ShipControls.Data(0, 0));
             playerEntityTemplate.Add(new ClientAuthorityCheck.Data());
+            playerEntityTemplate.Add(new Health.Data(1000));
 
             // Sets the access permisisons for each component on the entity relative to the client or server worker ids.
             var acl = Acl.Build()
@@ -30,7 +32,8 @@ namespace Assets.Gamelogic.EntityTemplates
                 .SetWriteAccess<WorldTransform>(CommonRequirementSets.SpecificClientOnly(clientWorkerId))
                 .SetWriteAccess<ClientConnection>(CommonRequirementSets.PhysicsOnly)
                 .SetWriteAccess<ShipControls>(CommonRequirementSets.SpecificClientOnly(clientWorkerId))
-                .SetWriteAccess<ClientAuthorityCheck>(CommonRequirementSets.SpecificClientOnly(clientWorkerId));
+                .SetWriteAccess<ClientAuthorityCheck>(CommonRequirementSets.SpecificClientOnly(clientWorkerId))
+                .SetWriteAccess<Health>(CommonRequirementSets.PhysicsOnly);
             playerEntityTemplate.SetAcl(acl);
 
             return playerEntityTemplate;
