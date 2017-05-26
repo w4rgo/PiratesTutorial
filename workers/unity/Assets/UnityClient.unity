@@ -301,7 +301,7 @@ MonoBehaviour:
       ShowDebugTraces: 0
       UseInstrumentation: 1
     Networking:
-      Ip: 
+      Ip: 10.0.0.96
       LinkProtocol: 1
       Port: 7777
       RaknetHeartbeatTimeoutMillis: 60000

@@ -25,6 +25,7 @@ namespace Assets.Gamelogic.EntityTemplates
             playerEntityTemplate.Add(new ShipControls.Data(0, 0));
             playerEntityTemplate.Add(new ClientAuthorityCheck.Data());
             playerEntityTemplate.Add(new Health.Data(1000));
+            playerEntityTemplate.Add(new Score.Data(0));
 
             // Sets the access permisisons for each component on the entity relative to the client or server worker ids.
             var acl = Acl.Build()
@@ -33,7 +34,9 @@ namespace Assets.Gamelogic.EntityTemplates
                 .SetWriteAccess<ClientConnection>(CommonRequirementSets.PhysicsOnly)
                 .SetWriteAccess<ShipControls>(CommonRequirementSets.SpecificClientOnly(clientWorkerId))
                 .SetWriteAccess<ClientAuthorityCheck>(CommonRequirementSets.SpecificClientOnly(clientWorkerId))
-                .SetWriteAccess<Health>(CommonRequirementSets.PhysicsOnly);
+                .SetWriteAccess<Health>(CommonRequirementSets.PhysicsOnly)
+                .SetWriteAccess<Score>(CommonRequirementSets.PhysicsOnly);
+
             playerEntityTemplate.SetAcl(acl);
 
             return playerEntityTemplate;
